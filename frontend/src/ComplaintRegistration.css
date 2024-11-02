@@ -1,0 +1,55 @@
+/* frontend/src/ComplaintRegistration.css */
+.complaint-registration-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #007bff;
+}
+
+.success{
+    background-color: #4caf50;
+    margin: 0 0.5em;
+}
+
+.reject{
+    background-color: #d00101;
+}
+.tablestyle{
+    padding: 0 30px;
+}

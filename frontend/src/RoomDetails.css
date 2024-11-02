@@ -1,0 +1,25 @@
+/* frontend/src/RoomDetails.css */
+.room-details-container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.room-details-container h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
