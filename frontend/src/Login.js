@@ -18,7 +18,7 @@ const Login = () => {
              
             // Navigate based on role
             if (response.data.role === 'admin') {
-                navigate('/admin'); // Admin dashboard
+                navigate('/admin/room-details'); // Admin dashboard
             } else {
                 navigate('/dashboard/book-room'); // Student dashboard
             }
