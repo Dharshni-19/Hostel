@@ -9,12 +9,23 @@ dotenv.config();
 
 const app = express();
 
+const allowedOrigins = ['http://localhost:3000', 'https://neon-clafoutis-4bef8f.netlify.app'];
 
-const corsOptions ={
-    origin:'http://localhost:3000', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
+// Set up CORS configuration
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+
+    // Check if the origin is in the allowed list
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true // Optional: if you need to send cookies with requests
+}));
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
