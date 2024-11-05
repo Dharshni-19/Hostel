@@ -9,21 +9,13 @@ dotenv.config();
 
 const app = express();
 
-// Configure CORS for production
-const allowedOrigins = [
-  'http://localhost:3000',               // for development
-  'https://neon-clafoutis-4bef8f.netlify.app'        // replace with your frontend production URL
-];
-
-app.use(cors({
-  origin: (origin, callback) => {
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
-}));
+const cors = require('cors');
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 const authRoutes = require('./routes/auth');
