@@ -26,7 +26,7 @@ app.use(cors({
   },
   credentials: true // Optional: if you need to send cookies with requests
 }));
-app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 const authRoutes = require('./routes/auth');
