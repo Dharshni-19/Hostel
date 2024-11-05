@@ -12,7 +12,7 @@ const app = express();
 // Configure CORS for production
 const allowedOrigins = [
   'http://localhost:3000',               // for development
-  'https://your-frontend-url.com'        // replace with your frontend production URL
+  'https://neon-clafoutis-4bef8f.netlify.app'        // replace with your frontend production URL
 ];
 
 app.use(cors({
