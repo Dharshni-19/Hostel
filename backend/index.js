@@ -24,8 +24,11 @@ app.use(cors({
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true // Optional: if you need to send cookies with requests
+  credentials: true // Required if you’re using cookies or authorization headers
 }));
+
+// Handle preflight requests for all routes
+app.options('*', cors());
 
 app.use(bodyParser.json());
 
@@ -45,3 +48,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
