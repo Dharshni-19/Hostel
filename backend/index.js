@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:3000', 'https://neon-clafoutis-4bef8f.netlify.app'];
+const allowedOrigins = ['http://localhost:3000', 'https://famous-caramel-6e3443.netlify.app/'];
 
 // Set up CORS configuration
 app.use(cors({
