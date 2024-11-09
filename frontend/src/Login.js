@@ -14,7 +14,7 @@ const Login = () => {
             const response = await axios.post('http://localhost:5000/api/auth/login', { username, password });
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('userRole', response.data.role);
-            alert(Logged in as ${response.data.role});
+            alert(`Logged in as ${response.data.role}`);
              
             // Navigate based on role
             if (response.data.role === 'admin') {
