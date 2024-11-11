@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:3000', 'https://famous-caramel-6e3443.netlify.app/'];
+const allowedOrigins = ['https://hostel-1-uriu.onrender.com', 'https://famous-caramel-6e3443.netlify.app/'];
 
 // Set up CORS configuration
 app.use(cors({
