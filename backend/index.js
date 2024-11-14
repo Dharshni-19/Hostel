@@ -20,7 +20,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes); 
 app.use('/api/complaints', issueRoutes);
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, connectTimeoutMS: 30000, socketTimeoutMS: 30000})
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error(err));
 
